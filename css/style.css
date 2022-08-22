@@ -32,18 +32,25 @@ header #inicio #logo2{
     /*Main*/
 
 main{
+    overflow-x: hidden;
     width: 80%;
     margin: 0 auto;
     position: relative;
 }
-main #principal img{
+main #fotoprincipal{
     width: 100%;
+    height: 600px;
+    position: relative;
+}
+main #principal #fotao{
+    width: 100%;
+    height: 100%;
 }
 main #principal #seta{
-    width: 5%;
-    position: absolute;
-    right: 50%;
-    top: 550px;
+    width: 50px;
+    position: relative;
+    bottom: 30px;
+    left: 50%;
 }
 
     /*Formulario*/
@@ -98,7 +105,7 @@ main #principal form #bt:active{
     /*Abaixo*/
 
 main section{
-    background-color: rgb(156, 156, 253);
+    background-color: rgba(156, 156, 253, 0.41);
     height: 250px;
     display: flex;
     margin-bottom: 5px;
@@ -108,28 +115,139 @@ main .section{
     font-size: 35px;
     text-align: center;
     flex-direction: column;
-    padding-top: 70px;
+    padding-top: 50px;
     
 
 }
 main .section h2{
     font-size: 25px;
-    margin-top: 15px;
+    margin: 15px 0;
+}
+main .flex{
+    background-color: rgba(117, 117, 236, 0.41);
 }
 main .flex .escrito{
     width: 50%;
-    margin: 25px 10px; 
+    margin: 20px 10px; 
+    padding: 50px;
 }
 
 main .flex .mosaico{
-    height: 100%;       /*para fazer para mobile devo mudar isso.*/
-    right: 0;
+    height: 100%;      /*para fazer para mobile devo mudar isso.*/
+    width: 50%;
+
 
 }
 main .flex img{
+    width: 100%;
     height: 100%;
-
 }
 
+    /*flex invertidos*/
+
+main .flex2{
+    flex-direction: row-reverse;
+    background-color: rgba(195, 254, 195, 0.59);
+}
+
+main .flex2 .escrito{
+    width: 50%;
+    margin: 20px 10px; 
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+main .flex2 .mosaico{
+    height: 100%;      /*para fazer para mobile devo mudar isso.*/
+    width: 50%;
 
 
+}
+main .flex2 img{
+    width: 100%;
+    height: 100%;
+}
+
+    /*last section*/
+
+main #last{
+    flex-direction: column;
+}
+main #last h2{
+    width: 90%;
+    margin: 50px auto 20px auto;
+    font-size: 25px;
+}
+main #last h3{
+    width: 90%;
+    margin: 0 auto;
+    text-decoration: underline;
+    color: rgb(42, 42, 42);
+    text-align: center;
+    margin-bottom: 20px;
+}
+footer{
+    text-align: center;
+}
+footer img{
+    margin: 20px 0;
+    width: 150px;
+}
+
+    /*Responsivo*/
+
+    @media screen and (max-width: 1280px) {
+        main #principal form{
+            width: 40%;
+        }
+        main{
+            width: 95%;
+        }   
+    }
+    @media screen and (max-width: 800px) {
+        header #inicio .logo img{
+            width:150px;
+            margin: 20px 0;
+        }
+        main .section{
+            font-size: 20px;
+        }
+        main #principal form{
+            display: block;
+            width: 80%;
+        }
+        main section{
+            height: 100%;
+        }
+        main .flex{
+            flex-direction: column;
+        }
+        main .flex .mosaico{
+            width: 100%;
+        }
+        main .flex .escrito{
+            width: 95%;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+            /*FLEX2*/
+
+        main .flex2{
+            flex-direction: column;
+        }
+        main .flex2 .mosaico{
+            width: 100%;
+        }
+        main .flex2 .escrito{
+            width: 95%;
+            padding: 10px;
+            margin: 20px auto;
+        }
+        main #last{
+            font-size: 15px;
+        }
+   
+
+        
+    }
